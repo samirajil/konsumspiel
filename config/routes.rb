@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user_items/new'
+  get 'user_items/create'
   get 'players/index'
   get 'items/index'
   devise_for :users
