@@ -2,13 +2,21 @@
   background: #005C4E;
 }
 
-.nav-item {
+.nav-item.active {
   background: $body-color;
-  color: #005C4E;
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 10px;
+  margin-right: 10px;
+}
+
+.nav-item {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .nav-item:hover {
