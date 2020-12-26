@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+    text-align: center;
+}
+
+.title-img{
+    width: 80%;
+    max-width: 500px;
+    margin-top: 40px;
+}
