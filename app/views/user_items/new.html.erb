@@ -1,2 +1,11 @@
-<h1>UserItems#new</h1>
-<p>Find me in app/views/user_items/new.html.erb</p>
+<h1>Das Konsumspiel</h1>
+<p>Trage deine Einkäufe ein:</p>
+<div class="spacer"></div>
+
+<div class="container">
+    <%= simple_form_for(@useritem) do |f| %>
+    <%= f.input :item, label: "Was hast du gekauft?", as: :select, collection: @items %>
+    <%= f.input :number, label: "Anzahl" %>
+    <%= f.button :submit, "Speichern", class: "nav-item active" %>
+    <% end %>
+</div>

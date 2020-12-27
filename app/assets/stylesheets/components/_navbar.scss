@@ -22,4 +22,9 @@
 
 .nav-item:hover {
   color: #005C4E;
+  transform: scale(1.05) perspective(1px);
+}
+
+.nav-item {
+  color: #005C4E;
 }
