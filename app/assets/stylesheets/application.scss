@@ -49,3 +49,47 @@ body {
     margin-top: 10px;
     max-width: 60px;
 }
+
+.btn-yellow {
+    background: #FCE76A;
+    border-radius: 10px;
+    padding: 9px;
+    margin: auto;
+    width: 100px;
+}
+
+.btn-yellow a {
+  color: #005C4E;
+}
+
+.btn-yellow a:hover {
+    color: #005C4E;
+    text-decoration: none;
+  }
+
+.btn-yellow:hover {
+    color: #FCE76A;
+    transform: scale(1.05) perspective(1px);
+  }
+
+  .btn-yellow-lg {
+    background: #FCE76A;
+    border-radius: 10px;
+    padding: 9px;
+    margin: auto;
+    width: 200px;
+}
+
+.btn-yellow-lg a {
+  color: #005C4E;
+}
+
+.btn-yellow-lg a:hover {
+    color: #005C4E;
+    text-decoration: none;
+  }
+
+.btn-yellow-lg:hover {
+    color: #FCE76A;
+    transform: scale(1.05) perspective(1px);
+  }

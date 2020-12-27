@@ -3,7 +3,7 @@
 }
 
 .nav-item.active {
-  background: $body-color;
+  background: #FCE76A;
   border-radius: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -21,7 +21,7 @@
 }
 
 .nav-item:hover {
-  color: #005C4E;
+  color: #FCE76A;
   transform: scale(1.05) perspective(1px);
 }
 
