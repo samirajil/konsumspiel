@@ -26,6 +26,7 @@
   <div class=<%= i < 19 ? "number" : "number-lg" %>><%=i*10%></div>
   <% for player in @players.each do %>
     <% if player.points.round(-1) == i * 10 %>
+      <%= cl_image_tag(player.photo.key, class: "gameover-img") %>
       <div class="name"><%= player.first_name %></div>
     <% end %>
   <% end %>

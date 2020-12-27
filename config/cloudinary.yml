@@ -1,0 +1,6 @@
+production:
+  cloud_name: "dlkwf154y"
+  api_key: "773699322325881"
+  api_secret: "fP3t-Im15OU4O9P4b8SR3HLfjSc"
+  secure: true
+  cdn_subdomain: true
