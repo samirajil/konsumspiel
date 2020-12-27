@@ -2,10 +2,10 @@
 <p>Trage deine Einkäufe ein:</p>
 <div class="spacer"></div>
 
-<div class="container">
+<div class="container-left m-auto">
     <%= simple_form_for(@useritem) do |f| %>
     <%= f.input :item, label: "Was hast du gekauft?", as: :select, collection: @items %>
     <%= f.input :number, label: "Anzahl" %>
-    <%= f.button :submit, "Speichern", class: "nav-item active" %>
+    <%= f.button :submit, "Speichern", class: "submit-button" %>
     <% end %>
 </div>

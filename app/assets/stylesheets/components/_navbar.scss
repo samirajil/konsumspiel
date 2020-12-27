@@ -1,5 +1,6 @@
 .navbar-lewagon {
   background: #005C4E;
+  margin-bottom: 20px;
 }
 
 .nav-item.active {
@@ -21,10 +22,13 @@
 }
 
 .nav-item:hover {
-  color: #FCE76A;
   transform: scale(1.05) perspective(1px);
 }
 
-.nav-item {
-  color: #005C4E;
+.nav-link {
+  color: #005C4E !important;
+}
+
+.nav-link.inactive {
+  color: #FCE76A !important;
 }

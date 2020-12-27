@@ -93,3 +93,26 @@ body {
     color: #FCE76A;
     transform: scale(1.05) perspective(1px);
   }
+
+  .btn-yellow-lg input {
+    color: #005C4E;
+  }
+  
+  .btn-yellow-lg input:hover {
+      color: #005C4E;
+      text-decoration: none;
+    }
+
+    .submit-button {
+      color: #005C4E;
+      background: #FCE76A;
+      border-radius: 10px;
+      padding: 9px;
+      width: 100px;
+      margin-top: 20px;
+    }
+
+    .submit-button:hover {
+      color: #005C4E;
+      transform: scale(1.05) perspective(1px);
+    }
