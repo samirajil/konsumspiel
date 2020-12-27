@@ -8,22 +8,22 @@
 </div>
 
 <div class="flex-container">
-<% for i in 1..35 do %>
+<% for i in 0..34 do %>
   <div class=
-    <%= if i < 7
+    <%= if i < 6
       "field"
-    elsif i < 13
+    elsif i < 12
       "field-s"
-    elsif i < 19
+    elsif i < 18
       "field-md"
-    elsif i < 25
+    elsif i < 24
       "field-lg"
-    elsif i < 31
+    elsif i < 30
       "field-xl"
     else
       "field-xxl"
     end %>>
-  <div class=<%= i < 19 ? "number" : "number-lg" %>><%=i*10%></div>
+  <div class=<%= i < 18 ? "number" : "number-lg" %>><%=i*10%></div>
   <% for player in @players.each do %>
     <% if player.points.round(-1) == i * 10 %>
     <div class="center mt-4">
