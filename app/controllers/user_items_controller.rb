@@ -13,8 +13,8 @@ class UserItemsController < ApplicationController
     @useritem.user = current_user
     
     if @useritem.save
-      raise
-      current_user.points += @useritem[:number] * @item[:poins]
+      current_user.points += @useritem[:number] * @item[:item_points]
+      current_user.save
       redirect_to players_index_path
     else
       render new

@@ -1,115 +1,44 @@
 <h1>Das Konsumspiel</h1>
 <p>Warst du einkaufen? Erzähl uns von deinen Sünden:</p>
 
-<div class="container">
-  <div class="nav-item active">
+<div class="container-centered container">
+  <div class="nav-item active m-auto">
     <%= link_to "Jetzt eintragen", user_items_new_path, class: "nav-link" %>
   </div>
 </div>
 
 <div class="flex-container">
-  <div class="field">
-    <div class="number">10</div>
+<% for i in 1..35 do %>
+  <div class=
+    <%= if i < 7
+      "field"
+    elsif i < 13
+      "field-s"
+    elsif i < 19
+      "field-md"
+    elsif i < 25
+      "field-lg"
+    elsif i < 31
+      "field-xl"
+    else
+      "field-xxl"
+    end %>>
+  <div class=<%= i < 19 ? "number" : "number-lg" %>><%=i*10%></div>
+  <% for player in @players.each do %>
+    <% if player.points.round(-1) == i * 10 %>
+      <div class="name"><%= player.first_name %></div>
+    <% end %>
+  <% end %>
   </div>
-  <div class="field">
-    <div class="number">20</div>
-  </div>
-    <div class="field">
-    <div class="number">30</div>
-  </div>
-    <div class="field">
-    <div class="number">40</div>
-  </div>
-    <div class="field">
-    <div class="number">50</div>
-  </div>
-  <div class="field">
-    <div class="number">60</div>
-  </div>
-  <div class="field-s">
-    <div class="number">70</div>
-  </div>
-    <div class="field-s">
-    <div class="number">80</div>
-  </div>
-  <div class="field-s">
-    <div class="number">90</div>
-  </div>
-    <div class="field-s">
-    <div class="number">100</div>
-  </div>
-    <div class="field-s">
-    <div class="number">110</div>
-  </div>
-    <div class="field-s">
-    <div class="number">120</div>
-  </div>
-    <div class="field-md">
-    <div class="number">130</div>
-  </div>
-    <div class="field-md">
-    <div class="number">140</div>
-  </div>
-    <div class="field-md">
-    <div class="number">150</div>
-  </div>
-    <div class="field-md">
-    <div class="number">160</div>
-  </div>
-    <div class="field-md">
-    <div class="number">170</div>
-  </div>
-    <div class="field-md">
-    <div class="number">180</div>
-  </div>
-    <div class="field-lg">
-    <div class="number-lg">190</div>
-    <%= cl_image_tag("003-artic_fox_txfess.png", class: "player-icon")%>
-  </div>
-    <div class="field-lg">
-    <div class="number-lg">200</div>
-  </div>
-    <div class="field-lg">
-    <div class="number-lg">210</div>
-  </div>
-    <div class="field-lg">
-    <div class="number-lg">220</div>
-  </div>
-    <div class="field-lg">
-    <div class="number-lg">230</div>
-  </div>
-    <div class="field-lg">
-    <div class="number-lg">240</div>
-  </div>
-    <div class="field-xl">
-    <div class="number-lg">250</div>
-  </div>
-    <div class="field-xl">
-    <div class="number-lg">260</div>
-  </div>
-    <div class="field-xl">
-    <div class="number-lg">270</div>
-  </div>
-    <div class="field-xl">
-    <div class="number-lg">280</div>
-  </div>
-    <div class="field-xl">
-    <div class="number-lg">290</div>
-  </div>
-  <div class="field-xl">
-    <div class="number-lg">300</div>
-  </div>
-  <div class="field-xxl">
-    <div class="number-lg">310</div>
-  </div>
-  <div class="field-xxl">
-    <div class="number-lg">320</div>
-  </div>
-  <div class="field-gameover">
-    Game Over
-  </div>
-
+<% end %>
+<div class="field-xxl">
+  <%= cl_image_tag("rauch_xasbwz.png", class: "gameover-img") %>
+  <p>Game Over</p>
 </div>
+</div>
+
+
+
 
 
 

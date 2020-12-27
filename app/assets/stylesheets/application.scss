@@ -22,10 +22,16 @@ body {
     margin-top: 40px;
 }
 
-.container {
+.container-left {
     width: 80%;
     max-width: 500px;
     text-align: left;
+}
+
+.container-centered {
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
 }
 
 
@@ -38,3 +44,8 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     }
+
+.gameover-img {
+    margin-top: 10px;
+    max-width: 60px;
+}
