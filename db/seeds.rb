@@ -9,16 +9,23 @@
 Item.delete_all
 
 @item = Item.create(
-  name: "Hose, Pullover, T-Shirt, Kleid, ect",
-  item_points: 10
-)
-
-@item = Item.create(
-  name: "Unterwäsche, Socken, ect",
-  item_points: 7
+  name: "Küchengeräte, Elektronik, ect",
+  item_points: 12
 )
 
 @item = Item.create(
   name: "Gurt, Handtasche, Schmuck, ect",
-  item_points: 12
+  item_points: 9
 )
+
+@item = Item.create(
+  name: "Hose, Pullover, T-Shirt, Kleid, ect",
+  item_points: 7
+)
+
+@item = Item.create(
+  name: "Unterwäsche, Socken, ect",
+  item_points: 5
+)
+
+

@@ -1,18 +1,22 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto list-group-horizontal">
-      <% if user_signed_in? %>
+  <div id="navbarSupportedContent" class="d-flex align-items-center">
+    <ul class="navbar-nav mr-auto list-group-horizontal d-flex align-items-center">
       <li class="nav-item active">
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <%= link_to "Spielen", players_index_path, class: "nav-link" %>
       </li>
-      <% else %>
-      <li class="nav-item active">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      </li>
-      <% end %>
       <li class="nav-item">
         <%= link_to "Regeln", items_index_path, class: "nav-link inactive" %>
       </li>
+      <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link inactive" %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "nav-link inactive" %>
+      </li>
+      <% end %>
     </ul>
   </div>
 </div>
+
