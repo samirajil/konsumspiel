@@ -8,36 +8,46 @@
 </div>
 
 <div class="flex-container">
-<% for i in 0..34 do %>
-  <div class=
-    <%= if i < 6
-      "field"
-    elsif i < 12
-      "field-s"
-    elsif i < 18
-      "field-md"
-    elsif i < 24
-      "field-lg"
-    elsif i < 30
-      "field-xl"
-    else
-      "field-xxl"
-    end %>>
-  <div class=<%= i < 18 ? "number" : "number-lg" %>><%=i*10%></div>
-  <% for player in @players.each do %>
-    <% if player.points.round(-1) == i * 10 %>
-    <div class="center mt-4">
-      <%= cl_image_tag(player.photoname, class: "icon-img") %>
-      <div class="name"><%= player.first_name %></div>
+  <% for i in 0..34 do %>
+    <div class=
+      <%= if i < 6
+        "field"
+      elsif i < 12
+        "field-s"
+      elsif i < 18
+        "field-md"
+      elsif i < 24
+        "field-lg"
+      elsif i < 30
+        "field-xl"
+      else
+        "field-xxl"
+      end %>>
+    
+      <div class="number"><%=i*10%></div>
+
+      <% @playerswithnumber = @players.select {|player| player.points.round(-1) == i * 10} %>
+
+      <% if @playerswithnumber.size == 1 %>
+        <% for player in @playerswithnumber do %>
+          <div class="center mt-2">
+            <%= cl_image_tag(player.photoname, class: "icon-img") %>
+            <div class="name"><%= player.first_name %></div>
+          </div>
+        <% end %>
+      <% elsif @playerswithnumber.size > 1 %>
+        <div class="flexcontainer-animals">
+          <% for player in @playerswithnumber do %>
+            <%= cl_image_tag(player.photoname, class: "icon-img-sm", title: "#{player.first_name}") %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
-    <% end %>
   <% end %>
+  <div class="field-xxl">
+    <%= cl_image_tag("rauch_xasbwz.png", class: "gameover-img") %>
+    <p>Game Over</p>
   </div>
-<% end %>
-<div class="field-xxl">
-  <%= cl_image_tag("rauch_xasbwz.png", class: "gameover-img") %>
-  <p>Game Over</p>
-</div>
 </div>
 
 
