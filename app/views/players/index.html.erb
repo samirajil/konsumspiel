@@ -30,7 +30,7 @@
 
       <% if @playerswithnumber.size == 1 %>
         <% for player in @playerswithnumber do %>
-          <div class="center mt-3">
+          <div class="center mt-4">
             <%= cl_image_tag(player.photoname, class: "icon-img") %>
             <div class="name"><%= player.first_name %></div>
           </div>

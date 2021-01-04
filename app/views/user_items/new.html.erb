@@ -4,8 +4,9 @@
 
 <div class="container-left m-auto">
     <%= simple_form_for(@useritem) do |f| %>
-    <%= f.input :item, label: "Was hast du gekauft?", as: :select, collection: @items %>
-    <%= f.input :number, label: "Anzahl" %>
+    <%= f.input :description, label: "Was hast du gekauft?", input_html: { required: true } %>
+    <%= f.input :item, label: "Art", as: :select, collection: @items %>
+    <%= f.input :number, label: "Anzahl", input_html: { required: true } %>
     <%= f.button :submit, "Speichern", class: "submit-button" %>
     <% end %>
 </div>

@@ -1,0 +1,23 @@
+<h1>Deine Einkäufe</h1>
+<div class="container">
+<p>Hier siehst du was du dieses Jahr schon alles eingekauft hast:.</p>
+
+<div class="spacer"></div>
+<div class="container-left m-auto">
+
+<table style="width:100%">
+    <tr>
+        <th>Datum</th>
+        <th>Anzahl</th>
+        <th>Konsumgut</th>
+    </tr>
+    <% @useritems.each do |item| %>
+        <tr>
+            <td><%= item.created_at.strftime("%m/%d/%Y")%></td>
+            <td><%= item.number %></td>
+            <td><%= item.description%></td>
+        </tr>
+    <% end %>
+</table>
+</div>
+</div>
