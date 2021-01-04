@@ -23,7 +23,7 @@ class UserItemsController < ApplicationController
   end
 
   def index
-    @useritems = UserItem.all
+    @useritems = UserItem.where(user: current_user)
   end
 
   def useritem_params
